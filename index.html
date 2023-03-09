@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>scrolly-photos - a horizontally scrolling photo gallery custom element</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        body {
+            border-top: 10px solid #ED9E00;
+            font-family: 'Source Sans Pro';
+            margin: 0;
+        }
+        
+        main {
+            margin: 1rem auto;
+            max-width: 800px;
+            padding: .25rem 1rem;
+        }
+        
+        code pre {
+            overflow-x: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1><code>scrolly-photos</code></h1>
+
+        <em>A horizontally scrolling photo gallery that weighs 6.7kb with dependencies</em>
+
+        <p>A <code>&lt;scrolly-photos&gt;</code> custom element that wraps any number of <code>&lt;img&gt;</code> elements and converts them into a horizontal scrolling gallery that is tied to the user's scroll position. Falls back to vertically stacking
+            the images when Javascript is not available.</p>
+
+        <p>This element uses <a href="https://pudding.cool/process/introducing-scrollama/"><code>scrollama</code></a> by Russell Samora to handle scroll management.</p>
+
+        <p>Here's an example. The code below creates the horizontally scrolling set of photos beneath.</p>
+
+        <p>PS: Remember to always include <code>alt</code> text with images.</p>
+
+        <code>
+      <pre>
+&lt;scrolly-photos&gt;
+  &lt;img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 05.jpg" alt="Bobby Riley, 87, at his home at a mobile home park in Stockton on Jan. 27, 2023. Riley has been using a generator for electricity and relying on bottled water, as his park currently doesn't provide those services. Photo by Miguel Gutierrez Jr., CalMatters"&gt;
+  &lt;img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 06.jpg" alt="Bobby Riley has been relying on bottled water for drinking and washing dishes, as his mobile home park currently doesn't provide those services. Jan. 27, 2023. Photo by Miguel Gutierrez Jr., CalMatters"&gt;
+  &lt;img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 13.jpg" alt="Bobby Riley, 87, at his home at a mobile home park in Stockton on Jan. 27, 2023. Riley has been using a generator for electricity and relying on bottled water, as his park currently doesn't provide those services. Photo by Miguel Gutierrez Jr., CalMatters"&gt;
+&lt;/scrolly-photos&gt;
+      </pre>
+    </code>
+    </main>
+
+    <scrolly-photos>
+        <img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 05.jpg" alt="Bobby Riley, 87, at his home at a mobile home park in Stockton on Jan. 27, 2023. Riley has been using a generator for electricity and relying on bottled water, as his park currently doesn't provide those services. Photo by Miguel Gutierrez Jr., CalMatters">
+        <img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 06.jpg" alt="Bobby Riley has been relying on bottled water for drinking and washing dishes, as his mobile home park currently doesn't provide those services. Jan. 27, 2023. Photo by Miguel Gutierrez Jr., CalMatters">
+        <img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 13.jpg" alt="Bobby Riley, 87, at his home at a mobile home park in Stockton on Jan. 27, 2023. Riley has been using a generator for electricity and relying on bottled water, as his park currently doesn't provide those services. Photo by Miguel Gutierrez Jr., CalMatters">
+    </scrolly-photos>
+
+    <script src="scrolly-photos.js" type="module"></script>
+</body>
+
+</html>
