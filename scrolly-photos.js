@@ -53,7 +53,9 @@ class ScrollyPhotos extends HTMLElement {
                 src
             }
         })
-
+        const shadow = this.attachShadow({
+            mode: 'open'
+        });
         const scrollyContainer = document.createElement('div')
         const photoContainer = document.createElement('div')
         const photosDiv = document.createElement('div')
@@ -78,16 +80,18 @@ class ScrollyPhotos extends HTMLElement {
             stepContainer.appendChild(step)
         })
 
-        this.innerHTML = s
+        shadow.innerHTML = s
+        shadow.appendChild(scrollyContainer)
+
+        photoContainer.appendChild(photosDiv)
         scrollyContainer.appendChild(photoContainer)
         scrollyContainer.appendChild(stepContainer)
-        photoContainer.appendChild(photosDiv)
-        this.appendChild(scrollyContainer)
 
         const scroller = scrollama();
 
         scroller
             .setup({
+                parent: this.shadowRoot, //.querySelector('.scrolly-photo-container'),
                 offset: 0.5,
                 progress: true,
                 step: '.step'
