@@ -1,0 +1,24 @@
+{
+    "name": "@calmatters/scrolly-photos",
+    "version": "1.0.0",
+    "description": "A photo gallery that scrolls horizontally as a reader scrolls vertically that weighs 6.7kb with dependencies",
+    "main": "scrolly-photos.js",
+    "scripts": {
+        "test": "playwright test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CALmatters/scrolly-photos.git"
+    },
+    "keywords": [],
+    "author": "@jeremiak",
+    "license": "CC-BY-SA",
+    "bugs": {
+        "url": "https://github.com/CALmatters/scrolly-photos/issues"
+    },
+    "homepage": "https://github.com/CALmatters/scrolly-photos#readme",
+    "devDependencies": {
+        "@playwright/test": "^1.31.2",
+        "http-server": "^14.1.1"
+    }
+}
