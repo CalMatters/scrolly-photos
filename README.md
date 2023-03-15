@@ -2,6 +2,8 @@
 
 _A photo gallery that scrolls horizontally as a reader scrolls vertically that weighs 6.7kb with dependencies_
 
+[![Run end-to-end tests](https://github.com/CALmatters/scrolly-photos/actions/workflows/test.yml/badge.svg)](https://github.com/CALmatters/scrolly-photos/actions/workflows/test.yml)
+
 A <code>&lt;scrolly-photos&gt;</code> custom element that wraps any number of <code>&lt;img&gt;</code> elements and converts them into a horizontal scrolling gallery that is tied to the user's scroll position. Falls back to vertically stacking the images when Javascript is not available.
 
 This element uses <a href="https://pudding.cool/process/introducing-scrollama/"><code>scrollama</code></a> by Russell Samora to handle scroll management.
