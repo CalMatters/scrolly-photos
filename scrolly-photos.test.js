@@ -33,6 +33,31 @@ test(`a shadow DOM <div.photo> is the same height as the window`, async({ page }
     expect(sameAsWindowHeight).toBe(true);
 });
 
+test(`the div.photo elements have aria-label with the alt text from the original <img> element`, async({ page }) => {
+    await page.goto('/')
+
+    const p = await page.evaluate(() => {
+        const imgs = document.querySelectorAll('scrolly-photos img')
+        const shadowRoot = document.querySelector('scrolly-photos').shadowRoot
+        const photos = shadowRoot.querySelectorAll('.photo')
+        const pairs = []
+
+        photos.forEach((photo, i) => {
+            const alt = imgs[i].getAttribute('alt')
+            const label = photo.getAttribute('aria-label')
+            pairs.push({
+                alt,
+                label
+            })
+        })
+
+        return pairs
+    })
+
+    expect(p[0].label).not.toBe(null)
+    expect(p[0].label).toBe(p[0].alt)
+});
+
 test(`the photos scroll left as reader scrolls down`, async({ page }) => {
     await page.goto('/')
     await page.waitForLoadState()
