@@ -37,7 +37,7 @@ class ScrollyPhotos extends HTMLElement {
     
     .scrolly-photo-container .step {
       font-size: 2rem;
-      height: 50vh;
+      height: 90vh;
     }
   </style>
   `
