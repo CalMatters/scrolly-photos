@@ -33,7 +33,7 @@ You'll also need to include the code that defines what a `<scrolly-photos>` elem
 </script>
 ````
 
-If you are OK with using code hosted from Github you can also add:
+If you are OK with using code hosted from Github you can instead add:
 ```html
 <script type="module" src="https://raw.githubusercontent.com/CALmatters/scrolly-photos/main/scrolly-photos.js"></script>
 ```
