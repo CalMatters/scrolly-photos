@@ -12,7 +12,7 @@ This element uses <a href="https://pudding.cool/process/introducing-scrollama/">
 
 Here's an example. The code below creates a horizontally scrolling set of photos.
 
-PS: Remember to always include <code>alt</code> text with images.
+Remember to always include <code>alt</code> text with images.
 
 ```html
 <scrolly-photos>
