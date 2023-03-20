@@ -4,6 +4,7 @@
     "description": "A photo gallery that scrolls horizontally as a reader scrolls vertically that weighs 6.7kb with dependencies",
     "main": "scrolly-photos.js",
     "scripts": {
+        "dev": "http-server ",
         "test": "playwright test"
     },
     "repository": {
