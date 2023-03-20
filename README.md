@@ -16,9 +16,9 @@ Remember to always include <code>alt</code> text with images.
 
 ```html
 <scrolly-photos>
-    <img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 05.jpg" alt="Bobby Riley, 87, at his home at a mobile home park in Stockton on Jan. 27, 2023. Riley has been using a generator for electricity and relying on bottled water, as his park currently doesn't provide those services. Photo by Miguel Gutierrez Jr., CalMatters">
-    <img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 06.jpg" alt="Bobby Riley has been relying on bottled water for drinking and washing dishes, as his mobile home park currently doesn't provide those services. Jan. 27, 2023. Photo by Miguel Gutierrez Jr., CalMatters">
-    <img src="https://calmatters-project-mobile-homes.netlify.app/photos/Stockton Mobile Home Park Second Visit MG 13.jpg" alt="Bobby Riley, 87, at his home at a mobile home park in Stockton on Jan. 27, 2023. Riley has been using a generator for electricity and relying on bottled water, as his park currently doesn't provide those services. Photo by Miguel Gutierrez Jr., CalMatters">
+    <img src="https://calmatters.org/wp-content/uploads/2022/06/112222-Mobile-Home-Parks-in-Stockton-RL-CM-03.jpg" alt="Mattresses lay on top of each other in a makeshift playground at Stockton Park Village in Stockton on Nov. 22, 2022. Bob Riley, 87, lives in the area where he states that the owner let the park go and garbage hasn't been picked up for months. Photo by Rahul Lal, CalMatters">
+    <img src="https://calmatters.org/wp-content/uploads/2022/06/112222-Mobile-Home-Parks-in-Stockton-RL-CM-16.jpg" alt="Garbage piles at Stockton Park Village in Stockton on Nov. 22, 2022. Photo by Rahul Lal, CalMatters.">
+    <img src="https://calmatters.org/wp-content/uploads/2022/06/112222-Mobile-Home-Parks-in-Stockton-RL-CM-34.jpg" alt="Trash and debris at Stockton Park village on Nov. 22, 2022. Photo by Rahul Lal, CalMatters">
 </scrolly-photos>
 ```
 
