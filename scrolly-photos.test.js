@@ -75,3 +75,22 @@ test(`the photos scroll left as reader scrolls down`, async({ page }) => {
     expect(translateXPropertyValue).toContain('-');
     expect(translateXPropertyValue).toContain('vw');
 });
+
+
+test(`the photos get printed`, async({ page }) => {
+    await page.goto('/')
+    await page.waitForLoadState()
+    await page.emulateMedia({ media: 'print' });
+
+    const counts = await page.evaluate(() => {
+        const imgs = document.querySelectorAll('scrolly-photos img')
+        const divs = document.querySelector('scrolly-photos').shadowRoot.querySelectorAll('img')
+
+        return {
+            imgs: imgs.length,
+            divs: divs.length
+        }
+    })
+
+    expect(counts.imgs).toBe(counts.divs);
+});
