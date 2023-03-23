@@ -39,6 +39,20 @@ class ScrollyPhotos extends HTMLElement {
       font-size: 2rem;
       height: 90vh;
     }
+
+    .photos-for-print {
+      display: none;
+    }
+
+    @media print {
+      .scrolly-photo-container {
+        display: none;
+      }
+  
+      .photos-for-print {
+        display: block;
+      }
+    }
   </style>
   `
 
@@ -60,11 +74,14 @@ class ScrollyPhotos extends HTMLElement {
         const photoContainer = document.createElement('div')
         const photosDiv = document.createElement('div')
         const stepContainer = document.createElement('div')
+        const photoForPrintContainer = document.createElement('div')
+
 
         scrollyContainer.classList.add('scrolly-photo-container')
         photoContainer.classList.add('photo-container')
         photosDiv.classList.add('photos')
         photosDiv.style.setProperty('--photo-count', photos.length)
+        photoForPrintContainer.classList.add('photos-for-print')
 
         photos.forEach(photo => {
             const d = document.createElement('div')
@@ -77,11 +94,25 @@ class ScrollyPhotos extends HTMLElement {
             const step = document.createElement('div')
             step.classList.add('step')
 
+            const img = document.createElement('img')
+            img.setAttribute('src', photo.src)
+            img.setAttribute('alt', photo.alt)
+
+            const figure = document.createElement('figure')
+            const caption = document.createElement('figcaption')
+
+            caption.innerText = photo.alt
+
+            figure.appendChild(img)
+            figure.appendChild(caption)
+            photoForPrintContainer.appendChild(figure)
+
             stepContainer.appendChild(step)
         })
 
         shadow.innerHTML = s
         shadow.appendChild(scrollyContainer)
+        shadow.appendChild(photoForPrintContainer)
 
         photoContainer.appendChild(photosDiv)
         scrollyContainer.appendChild(photoContainer)
